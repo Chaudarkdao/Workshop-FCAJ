@@ -185,4 +185,4 @@ Sau khi tham gia sự kiện "GenAI-powered App-DB Modernization workshop", tôi
 Sự kiện đã mang đến cái nhìn tổng quan và sâu sắc về cách AI đang định hình tương lai của doanh nghiệp. Từ Cloud Agent, Voice AI, DevOps Agent, AI trong HR đến Security & MCP Server, tất cả đều cho thấy tiềm năng to lớn của AI trong việc tối ưu hóa vận hành, nâng cao hiệu quả và tạo ra giá trị mới. Đây là thời điểm vàng để sinh viên chúng tôi trang bị kiến thức và kỹ năng về AI để sẵn sàng cho thị trường lao động tương lai.
 
 ### Hình ảnh sự kiện
-![Toàn cảnh sự kiện AWS First Cloud AI Journey Community Day](../../images/event/event1/checkin1.jpg)
+![Toàn cảnh sự kiện AWS First Cloud AI Journey Community Day](../../../images/event/event1/checkin1.jpg)
