@@ -1,4 +1,4 @@
-baseURL = "https://Chaudarkdao.github.io/Workshop-FCAJ/"
+baseURL = "http://localhost:1313/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
