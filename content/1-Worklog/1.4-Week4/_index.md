@@ -1,57 +1,51 @@
 ---
 title: "Week 4 Worklog"
-date: 2024-01-01
+date: 2026-07-25
 weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Meet and start working on the final project.
+* Exploratory Data Analysis (EDA) and Data Preprocessing.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks to be implemented this week:
+| Day | Task | Start Date | Completion Date | Reference |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Meet and select the final project topic | 06/07/2026   | 06/07/2026      |
+| 3   | - Exploratory Data Analysis (EDA) | 07/07/2026   | 07/07/2026      | 
+| 4   | - Exploratory Data Analysis (EDA) | 08/07/2026   | 08/07/2026      |
+| 5   | - Exploratory Data Analysis (EDA) | 09/07/2026   | 09/07/2026      |
+| 6   | - Data Preprocessing | 10/07/2026   | 10/07/2026      |
+| 7   | - Data Preprocessing | 11/07/2026   | 11/07/2026      | 
+| Sunday | - Data Preprocessing | 12/07/2026   | 12/07/2026      | 
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Team meeting and selecting the final project topic:
+  * Participated in the team meeting to discuss and select a suitable topic for the final project.
+  * Reached consensus on the development direction and project objectives.
+  * Clearly defined the scope of work and assigned tasks to team members.
 
-* Successfully created and configured an AWS Free Tier account.
+* Conducted Exploratory Data Analysis (EDA):
+  * Collected and loaded data from various sources for the project.
+  * Performed basic EDA steps including:
+    * Descriptive statistics to understand data structure and distribution.
+    * Checked for missing values.
+    * Detected outliers.
+    * Data visualization using appropriate charts to explore relationships between variables.
+    * Correlation analysis between variables.
+    * Assessed data quality and identified issues that need to be addressed.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Conducted Data Preprocessing:
+  * Prepared data for model training with the following steps:
+    * Handled missing values in categorical features.
+    * Encoded categorical variables.
+    * Data normalization/standardization.
+    * Handled missing values in numeric features.
+    * Split data into training set, test set, and validation set (if needed).
+    * Built an automated preprocessing pipeline for reusability.
+  * Saved preprocessing steps and documented the process to ensure consistency.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Completed all tasks on schedule, ensuring data quality is ready for the next steps of the project.

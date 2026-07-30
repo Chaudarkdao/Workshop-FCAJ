@@ -1,57 +1,58 @@
 ---
 title: "Week 6 Worklog"
-date: 2024-01-01
+date: 2026-07-25
 weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Connect and get familiar with members of First Cloud AI Journey.
+* Understand basic AWS services, how to use console & CLI.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks to be implemented this week:
+| Day | Task | Start Date | Completion Date | Reference |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Package and register model to SageMaker Model Registry <br> - Set up model versioning | 20/07/2026   | 20/07/2026      |
+| 3   | - Deploy model to SageMaker Endpoint <br> - Integrate API Gateway + Lambda to expose REST API | 21/07/2026   | 21/07/2026      | 
+| 4   | - Set up monitoring with SageMaker Model Monitor and CloudWatch <br> - Detect data drift | 22/07/2026   | 22/07/2026      |
+| 5   | - Automate the entire pipeline with SageMaker Pipelines | 23/07/2026   | 23/07/2026      |
+| 6   | - Finalize, Compile, Write report | 24/07/2026   | 24/07/2026      |
 
 ### Week 6 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Package and register model to SageMaker Model Registry:
+  * Successfully packaged the selected model as a model artifact (model.tar.gz).
+  * Registered the model to SageMaker Model Registry for centralized management.
+  * Set up model versioning to track different versions of the model.
+  * Assigned metadata and tags to the model for easy retrieval and management.
 
-* Successfully created and configured an AWS Free Tier account.
+* Deploy model to SageMaker Endpoint:
+  * Successfully created a SageMaker Endpoint for real-time inference.
+  * Configured the appropriate instance type based on performance and cost requirements.
+  * Tested the endpoint with sample data to ensure accurate operation.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Integrate API Gateway + Lambda to expose REST API:
+  * Built and deployed an AWS Lambda function to handle requests from clients.
+  * Integrated Lambda with SageMaker Endpoint to invoke model inference.
+  * Created a REST API on API Gateway to expose the endpoint externally.
+  * Configured CORS, authentication, and necessary security settings.
+  * Tested the API with tools such as Postman or curl.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Set up monitoring with SageMaker Model Monitor and CloudWatch:
+  * Configured SageMaker Model Monitor to track prediction quality.
+  * Set up data drift detection to identify changes in input data distribution.
+  * Created CloudWatch Alarms to alert when anomalies occur.
+  * Built a monitoring dashboard to track important metrics.
 
-* Used AWS CLI to perform basic operations such as:
+* Automate the entire pipeline with SageMaker Pipelines:
+  * Built an automated pipeline for the Machine Learning process from preprocessing to deployment.
+  * Integrated steps: data loading, preprocessing, training, evaluation, model registration.
+  * Configured pipeline triggers to automatically run when new data is available.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Finalize and compile the project:
+  * Wrote a summary report of the project implementation process.
+  * Compiled the results achieved, lessons learned, and future development directions.
+  * Prepared user documentation and system operation guides.
+  * Completed all tasks on schedule.

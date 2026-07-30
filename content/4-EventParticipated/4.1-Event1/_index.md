@@ -1,126 +1,188 @@
 ---
 title: "Event 1"
-date: 2024-01-01
+date: 2026-07-28
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Report on "AWS First Cloud AI Journey Community Day"
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- New perspectives on the AI wave shaping the future of enterprises
+- AI applications in business
 
-### Speakers
+### Speaker List
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Steve Tran** - CTO/Founder CloudThinker
+- **Mr. Trung** - CEO Revve AI
+- **Ms. Bao & Mr. Nguyen** - Cloud Kinetics
+- **Mr. Truong & Ms. Minh Anh** - Noventis
+- **Mr. Nghi & Mr. Toan** - Renova Cloud & AWS Security Builder
 
-### Key Highlights
+### Key Content
 
-#### Identifying the drawbacks of legacy application architecture
+#### Cloud Agent (Mr. Steve Tran - Cloud Thinker)
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+##### Problems Cloud Thinker solves:
 
-#### Transitioning to modern application architecture – Microservices
+- Traditional server operations consume human resources, costs, and time
+- When businesses move to the cloud, complexity increases, creating "technical debt"
+- Need AI to support cloud infrastructure operations, especially in critical sectors (banking, finance)
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+##### Cloud Thinker provides AI Agent solving 4 key problems:
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+- **Incident Response:** AI investigates incidents many times faster (in minutes instead of hours)
+- **Code Review:** Automatically reviews infrastructure code changes before production deployment
+- **Cost Optimization:** AI automatically optimizes cloud costs (reduces 100% of manual operations)
+- **Security Testing:** Automated penetration testing, detects security vulnerabilities
 
-#### Domain-Driven Design (DDD)
+##### Agent Architecture
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+Cloud Thinker uses Multi-Agent Architecture instead of Single Agent because:
 
-#### Event-Driven Architecture
+- Cost optimization (using smaller models for simple tasks)
+- Better context control
+- Easier role-based access control management
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+##### Advice for students
 
-#### Compute Evolution
+- Cloud and AI are changing the job market. Experience the enterprise environment early. AI will not completely replace humans but will support them. However, there will be a need for truly skilled people who know how to use AI effectively.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+#### Voice AI Agent (Mr. Trung - CEO Revve AI)
 
-#### Amazon Q Developer
+##### Basic Voice AI Structure
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+- Speech-to-Speech architecture: receives audio → processes → returns audio (common in English)
+- 3-component architecture (used for Vietnamese): Speech → Text → LLM processing → Text → TTS (Text-to-Speech)
 
-### Key Takeaways
+##### Why use 3-component architecture for Vietnamese
 
-#### Design Mindset
+- Speech-to-Speech doesn't support Vietnamese well yet (low-resource language)
+- LLM processing Vietnamese text is already very good
+- Easy content control and tool calling
+- Easy security and audit
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+##### Challenges when deploying Voice Agent for banks (VVBank, VPBank)
 
-#### Technical Architecture
+- **Speed**: Stream the entire pipeline to reduce latency
+- **Gender**: Detect speaker's gender for proper address (anh/chị)
+- **Interruption**: Handle when customers interrupt or pause mid-sentence
+- **Regional accents**: Model trained with 10-20% regional accent data
+- **Tool Calling**: Perform real tasks (block cards, inquiries, etc.)
+- **Fallback to Human**: Transfer to staff when AI cannot handle
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+#### DevOps Agent (Ms. Bao & Mr. Nguyen - Cloud Kinetics)
 
-#### Modernization Strategy
+##### Current issues for DevOps Engineers:
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+- **Fragmented Telemetry**: Logs and traces scattered across multiple locations (CloudWatch, Splunk, etc.)
+- **Knowledge Gap**: Each log/trace belongs to different teams, different domains
+- **Context Loss**: Difficulty linking information to find root cause
 
-### Applying to Work
+##### DevOps Agent (AWS DevOps Guru) solves with 6 pillars:
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- **Context Learning**: Learns entire infrastructure topology through Agent Space
+- **Control**: Granular permissions based on tags/resources
+- **Integration**: Connects via MCP to expand capabilities
+- **Collaboration**: Chat interface, integrates with Slack/ServiceNow
+- **Cost Effective**: Billed by runtime ($0.083/second)
 
-### Event Experience
+##### 4-step operational process:
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+- **Classification & Extraction**: Aggregates logs/traces when triggered (alert or chat)
+- **Investigation**: Generates hypotheses and proves/rejects them to find root cause
+- **Mitigation**: Proposes remediation plans (not automatically executed)
+- **Improvement**: Proposes long-term system improvements
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+#### AI & HR (Mr. Truong & Ms. Minh Anh - Noventis)
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+##### HR challenges in the AI era:
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+- Manual CV screening → missing talent
+- Subjective evaluation, lack of standardized data
+- Security risks when uploading data to public AI
+- Time-to-hire extended 1-2 months
+- Difficulty retaining good employees
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+##### Amazon Q (Quick) - Solution:
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+- **Chat Agent**: Custom agent for each business function (recruitment, policy, sales)
+- **Research**: Synthesizes information from web + internal documents, exports reports
+- **Quick BI**: Automatically analyzes data, visualizes
+- **Flow & Automate**: Automates repetitive admin tasks
+- **Diverse data connections**: SharePoint, Outlook, OneDrive, Gmail, Google Drive, Jira, Salesforce, GitHub, S3, database,...
 
-#### Some event photos
-*Add your event photos here*  
+##### HR Talent Review Demo:
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+1. Create JD (Job Description) for Junior Cloud Engineer in just a few commands
+2. Review 6 CVs, automatically score based on criteria set (technical 40%, problem-solving 25%, communication 15%, etc.)
+3. Classify: Strong/Good/Low/Very Low
+4. Export visual HTML report with comparison benchmark
+5. Automatically suggest expected salary
+
+- **Results**: Reduced hiring time, cost savings, improved employee quality.
+
+#### Security & MCP Server (Mr. Nghi & Mr. Toan - Renova Cloud & AWS Security Builder)
+
+##### Problem:
+
+Amazon Q (on the internet) needs to connect to MCP Server containing internal data. Connecting via public internet poses security risks (DDoS, Man-in-the-Middle, data leakage).
+
+##### Solution:
+
+Use VPC Connection to connect Amazon Q with MCP Server in Private Subnet
+
+##### Architecture:
+
+Amazon Q → VPC Connection → Interface Endpoint → ALB (HTTPS) → MCP Server (EC2)
+
+##### Security components:
+
+- VPC Endpoint (Interface Endpoint): Private connection, not via internet
+- Private DNS: Only accessible within VPC
+- ALB with TLS (encryption) and ACM certificate
+- Route 53 Resolver: Internal DNS to query MCP Server
+- Cognito: Authentication for users
+
+### Lessons Learned
+
+After participating in the "GenAI-powered App-DB Modernization workshop", I gained many valuable lessons about AI applications in business as well as personal development directions:
+
+#### 1. AI is changing how businesses operate
+
+- **Intelligent Automation**: AI not only automates repetitive tasks but also has the ability to analyze, make decisions, and solve complex problems across multiple fields from cloud operations, HR to finance.
+- **Cost and Time Optimization**: AI solutions like Cloud Agent, DevOps Agent have demonstrated significant reduction in incident handling time (from hours to minutes) and manual operations (up to 100%).
+- **Improved Work Quality**: AI helps humans make more accurate decisions based on data, for example in HR Talent Review helping to evaluate candidates objectively and effectively.
+
+#### 2. AI architecture and deployment need careful design
+
+- **Multi-Agent vs Single Agent**: Using Multi-Agent Architecture (like Cloud Thinker) helps optimize costs, better context control, and easier permission management.
+- **Suitable for local language and culture**: For Vietnamese, the 3-component architecture (Speech → Text → LLM → Text → TTS) is more effective than Speech-to-Speech because LLM's Vietnamese text processing capability is already very good.
+- **Security is key**: When deploying AI in enterprises, secure connections between systems (VPC Connection, Private Subnet, TLS encryption) are extremely important to protect internal data.
+
+#### 3. Challenges when deploying AI in practice
+
+- **Handling complex situations**: Voice Agent for banks faces many challenges such as processing speed, interruptions, regional accents, and tool calling.
+- **Integration with existing systems**: DevOps Agent must process data from multiple sources (CloudWatch, Splunk, etc.) and link information to find root cause.
+- **Fallback to Human**: Current AI cannot handle 100% of situations, requiring a mechanism to transfer to staff when necessary.
+
+#### 4. Future of the job market
+
+- **AI will not completely replace humans**: AI will be a powerful supporting tool, but there will still be a need for truly skilled people who know how to use AI effectively.
+- **Cloud and AI are changing the job market**: Students need to experience the enterprise environment early, access and become familiar with AI technologies to avoid falling behind.
+- **Need to develop new skills**: Besides professional knowledge, need to equip skills to work with AI, understand prompt engineering, and the ability to integrate AI into workflows.
+
+#### 5. Personal development direction
+
+- **Real-world experience**: Participate in workshops and events to learn from experts and understand AI applications in business.
+- **Access new technologies**: Learn about AWS AI services (SageMaker, Bedrock, Q), Agent-building frameworks (LangChain, CrewAI), and how to integrate AI into real applications.
+- **Build problem-solving mindset**: Instead of just learning theory, apply AI to solve real problems, from simple to complex.
+
+### Conclusion
+
+The event provided a comprehensive and in-depth view of how AI is shaping the future of enterprises. From Cloud Agent, Voice AI, DevOps Agent, AI in HR to Security & MCP Server, all demonstrate the enormous potential of AI in optimizing operations, improving efficiency, and creating new value. This is the golden time for us students to equip knowledge and skills about AI to be ready for the future job market.
+
+### Event Photos
+![Overview of AWS First Cloud AI Journey Community Day](/images/event/event1/checkin1.jpg)

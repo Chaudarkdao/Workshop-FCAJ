@@ -1,57 +1,35 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
+date: 2026-07-25
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Complete hands-on tasks to earn 100 USD
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+### Tasks to be implemented this week:
+| Day | Task | Start Date | Completion Date | Reference |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Learn about AWS Budget <br> - Create AWS Budgets for cost management | 22/06/2026   | 22/06/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Learn about Amazon RDS <br> - Create a MySQL database on Amazon RDS | 23/06/2026   | 23/06/2026      | <https://docs.aws.amazon.com/> |
+| 4   | - Learn about AWS Lambda <br> - Practice with a few simple functions on Lambda | 24/06/2026   | 24/06/2026      | <https://docs.aws.amazon.com/> |
+| 5   | - Learn about Amazon Bedrock <br> - Create DeepSeek AI tool and ask a few questions | 18/06/2025   | 19/06/2026     | <https://docs.aws.amazon.com/> |
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understand and implement AWS Budget:
+  * Grasped the concept and role of AWS Budget in cost management. Successfully created a budget and set up cost alerts on the AWS Management Console.
 
-* Successfully created and configured an AWS Free Tier account.
+* Get familiar with Amazon RDS:
+  * Understood the relational database model on the cloud platform. Successfully created and configured a MySQL instance on Amazon RDS, performed test connections, and verified basic operations.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Familiarize with AWS Management Console and know how to find, access, and use services from the web interface.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Practice AWS Lambda:
+  * Learned about serverless architecture and how AWS Lambda works. Successfully wrote and deployed a few simple functions on Lambda, and checked logs via CloudWatch.
 
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Explore Amazon Bedrock & DeepSeek AI:
+  * Understood Amazon Bedrock's capabilities in integrating AI models. Successfully accessed and tested the DeepSeek AI tool, asked some basic questions to evaluate responses.

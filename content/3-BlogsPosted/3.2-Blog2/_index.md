@@ -1,31 +1,29 @@
 ---
 title: "Blog 2"
-date: 2024-01-01
+date: 2026-07-29
 weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# Amazon SageMaker: AWS's AI/ML and How to Optimize to Avoid Wasting Money
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+Amazon SageMaker is AWS's comprehensive machine learning platform, allowing you to build, train, and deploy ML models at any scale. However, training and inference costs on SageMaker can increase rapidly without a clear optimization strategy.
 
-Key points to know:
+**Key points to understand:**
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+* **Managed Spot Training:** Use Spot Instances for training jobs to save up to 70% compared to On-Demand, with automatic checkpoint mechanisms that help resume training when instances are restored.
+* **Warm Start & Incremental Training:** Leverage pre-trained models and incremental training instead of training from scratch each time, significantly saving time and costs.
+* **Serverless Inference:** Deploy models as serverless endpoints for applications with low invocation frequency, automatically scaling from 0 and only charging when there are requests.
+* **Model Optimization with Neo & Quantization:** Use SageMaker Neo to compile models optimized for target hardware, combined with quantization (FP32 → INT8) to reduce size by 4x and double inference speed.
+* **Auto Scaling for Endpoint:** Configure Target Tracking Scaling to automatically scale out when CPU/RAM exceeds thresholds and scale in when traffic is low, reducing 24/7 operational costs.
+* **SageMaker Pipelines:** Build CI/CD for AI with pipelines that automate the workflow from training, evaluation, to deployment, ensuring quality gates and rollback when needed.
+* **Production Variants (A/B Testing):** Deploy multiple model versions simultaneously and adjust traffic ratios to test performance before official release.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+Machine Learning on the Cloud is not just about accuracy but also about cost and performance. Mastering SageMaker will help you build AI systems that are powerful, cost-effective, and easily scalable as data volume grows.
 
-...Image...
+### Image
+![Blog post image](/images/3-BlockPosted/post2/p2.jpg)
 
-...Link...
-
-...Guide...
+### Link
+https://www.facebook.com/groups/awsstudygroupfcj/permalink/2227364341361859/?rdid=68pXQ0dwEEaR4uKf#

@@ -1,59 +1,51 @@
 ---
 title: "Worklog Tuần 4"
-date: 2024-01-01
+date: 2026-07-25
 weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Họp và bắt đầu làm project cuối khóa.
+* Khai phá dữ liệu (EDA) và Tiền xử lý dữ liệu (Preprocessing)   .
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
-
+| 2   | - Họp và chọn đề tài project cuối khóa                                                                                             | 06/07/2026   | 06/07/2026      |
+| 3   | - Khai phá dữ liệu (EDA)                                          | 07/07/2026   | 07/07/2026      | 
+| 4   | - Khai phá dữ liệu (EDA) | 08/07/2026   | 08/07/2026      |
+| 5   | - Khai phá dữ liệu (EDA)                  | 09/07/2026   | 09/07/2026      |
+| 6   | - Tiền xử lý dữ liệu (Preprocessing)                                                                                        | 10/07/2026   | 10/07/2026      |
+| 7   | - Tiền xử lý dữ liệu (Preprocessing)                  | 11/07/2026   | 11/07/2026      | 
+| Chủ Nhật   | - Tiền xử lý dữ liệu (Preprocessing)                  | 12/07/2026   | 12/07/2026      | 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Họp nhóm và chọn đề tài project cuối khóa:
+  * Tham gia buổi họp nhóm để thảo luận và lựa chọn đề tài phù hợp cho project cuối khóa.
+  * Đạt được sự thống nhất về hướng phát triển và mục tiêu của project.
+  * Xác định rõ phạm vi công việc và phân công nhiệm vụ cho các thành viên trong nhóm.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Thực hiện Khai phá dữ liệu (EDA - Exploratory Data Analysis):
+  * Thu thập và tải dữ liệu từ các nguồn khác nhau phục vụ cho project.
+  * Thực hiện các bước EDA cơ bản bao gồm:
+    * Thống kê mô tả (descriptive statistics) để hiểu cấu trúc và phân phối dữ liệu.
+    * Kiểm tra  dữ liệu bị thiếu (missing values).
+    * Phát hiện các giá trị ngoại lai (outliers).
+    * Trực quan hóa dữ liệu (data visualization) bằng các biểu đồ phù hợp để khám phá mối quan hệ giữa các biến.
+    * Phân tích mối tương quan giữa các biến.
+    * Đánh giá chất lượng dữ liệu và xác định các vấn đề cần giải quyết.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thực hiện Tiền xử lý dữ liệu (Data Preprocessing):
+  * Chuẩn bị dữ liệu cho quá trình huấn luyện mô hình với các bước:
+    * Xử lý Missing value ở các feature categori .
+    * Mã hóa các biến phân loại (categorical variables encoding).
+    * Chuẩn hóa/Scale dữ liệu (data normalization/standardization).
+    * Xử lý Missing value ở các feature numeric.
+    * Chia tách dữ liệu thành tập huấn luyện (train set), tập kiểm tra (test set) và tập validation (validation set) nếu cần.
+    * Xây dựng pipeline tiền xử lý tự động để có thể tái sử dụng.
+  * Lưu lại các bước tiền xử lý và tài liệu hóa quy trình để đảm bảo tính nhất quán.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Hoàn thành các công việc đúng tiến độ, đảm bảo chất lượng dữ liệu sẵn sàng cho các bước tiếp theo của project.
 

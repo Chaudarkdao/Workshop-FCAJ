@@ -1,31 +1,30 @@
 ---
 title: "Blog 1"
-date: 2024-01-01
+date: 2026-07-29
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+# AWS Lambda: "Use it Right" and "Make it Fast" Strategies for Cost Optimization
 
-Key points to know:
+AWS Lambda is AWS's leading serverless compute service, allowing you to run code without managing servers. However, using Lambda effectively requires understanding the right Use Cases and optimization techniques to achieve peak performance at the lowest cost.
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+**Key points to understand:**
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+* **Right Use Cases:** Real-time event-driven processing, Serverless RESTful APIs through API Gateway, and system automation tasks with EventBridge/Cronjob.
+* **Connection Reuse:** Initialize Database clients, HTTP clients, and SDKs at global scope to leverage container reuse, reducing initialization time on every function invocation.
+* **Package Size Optimization:** Import only necessary libraries and use Lambda Layers to separate dependencies, reducing cold start time and speeding up deployments.
+* **Memory & vCPU Configuration:** Higher memory means more powerful vCPU. Increasing RAM can cut processing time by up to 50%, reducing total actual cost even though price per GB/second is higher.
+* **RDS Proxy:** Use when Lambda connects to MySQL/PostgreSQL to pool connections into connection pooling, protecting the database from overload when Lambda scales suddenly.
+* **Provisioned Concurrency:** For applications requiring low latency, keep instances ready to avoid cold start. Suitable for critical APIs with consistently high invocation frequency.
+* **Monitor with AWS X-Ray:** Enable X-Ray to trace requests, accurately identify performance bottlenecks, and optimize each component within your Lambda function.
 
-...Image...
+Serverless is a modern architectural mindset. Mastering AWS Lambda alongside other services in the AWS ecosystem will help you build flexible systems that are ready to scale at any time while optimizing operational costs.
 
-...Link...
+### Image
+![Blog Image](/images/3-BlockPosted/post1/p1.jpg)
 
-...Guide...
+### Link
+https://www.facebook.com/groups/awsstudygroupfcj/permalink/2227143931383900/?rdid=5jaCWs2BU5KXcoSe#

@@ -1,59 +1,48 @@
 ---
 title: "Worklog Tuần 3"
-date: 2024-01-01
+date: 2026-07-25
 weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu và thực hành SageMaker
+* Làm bài lab về chủ đề Machine Learning.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Đọc tài liệu về SageMaker <br> - Tìm hiểu về các chứng năng mà SageMaker cung cấp                                                                                              | 29/06/2026   | 29/06/2026      | <https://docs.aws.amazon.com/> |
+| 3   | - Tìm hiểu về Notebook trên SageMaker <br> - Thực hiện vài câu lệnh cơ bản trên notebook                                            | 30/06/2026   | 30/06/2026      | <https://docs.aws.amazon.com/> |
+| 4   | - Đọc và tìm hiểu về Data Wranger của SageMaker <br> - Thực hành xử lý dataset mẫu | 01/07/2026   | 01/07/2026      | <https://docs.aws.amazon.com/> |
+| 5   | - Tìm hiểu cách sử dụng S3 để lưu trữ dữ liệu                  | 02/07/2026   | 02/07/2026      | <https://docs.aws.amazon.com/> |
+| 6   | - **Thực hành bài lab về chủ đề Machine Learning:** <br>&emsp; + Tạo 1 notebook <br>&emsp; + Đưa dataset lên  S3 <br>&emsp; + Xử lý dữ liệu với Data Wranger <br>&emsp; +Train model và deploy model                                                                                     | 03/07/2026   | 03/07/2026      | https://cloudjourney.awsstudygroup.com/7-aimlservice/ |
 
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Tìm hiểu và nắm được tổng quan về Amazon SageMaker:
+  * Hiểu được SageMaker là gì và vai trò của nó trong việc xây dựng, huấn luyện và triển khai mô hình Machine Learning trên AWS.
+  * Nắm được các tính năng chính mà SageMaker cung cấp như: Notebook instances, Data Wrangler, Built-in algorithms, Autopilot, Pipeline, Endpoints,...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Làm quen với SageMaker Notebook:
+  * Hiểu được cách thức hoạt động của Notebook instances trên SageMaker.
+  * Tạo thành công một Notebook instance, thực hiện các câu lệnh Python cơ bản và kiểm tra kết quả trên môi trường Jupyter Notebook.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tìm hiểu và thực hành SageMaker Data Wrangler:
+  * Nắm được công dụng của Data Wrangler trong việc chuẩn bị và tiền xử lý dữ liệu.
+  * Thực hành xử lý một dataset mẫu bằng Data Wrangler bao gồm các bước: làm sạch dữ liệu, chuyển đổi dữ liệu, trực quan hóa và phân tích dữ liệu.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tìm hiểu về Amazon S3 và tích hợp với SageMaker:
+  * Biết cách sử dụng S3 để lưu trữ và quản lý dữ liệu phục vụ cho Machine Learning.
+  * Thực hành thao tác đưa dataset lên bucket S3 để chuẩn bị cho bài lab.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Hoàn thành bài lab thực hành về chủ đề Machine Learning:
+  * Tạo và cấu hình thành công một notebook trên SageMaker.
+  * Đưa dataset lên S3 và kết nối với notebook để xử lý dữ liệu.
+  * Áp dụng Data Wrangler để tiền xử lý và chuẩn bị dữ liệu.
+  * Thực hành huấn luyện (train) model sử dụng các thuật toán có sẵn trên SageMaker.
+  * Deploy model thành công lên endpoint và kiểm tra khả năng dự đoán của model.
 

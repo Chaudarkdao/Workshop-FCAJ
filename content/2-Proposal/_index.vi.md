@@ -1,108 +1,177 @@
 ---
 title: "Bản đề xuất"
-date: 2024-01-01
+date: 2026-07-27
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+## Hệ thống Dự đoán Bệnh Tim với Machine Learning trên AWS
 
-### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+### Giải pháp end-to-end sử dụng Amazon SageMaker cho chẩn đoán hỗ trợ y tế
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+---
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+### 1. Tóm tắt điều hành
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+Hệ thống Dự đoán Bệnh Tim được thiết kế nhằm hỗ trợ các cơ sở y tế trong việc sàng lọc và đánh giá nguy cơ bệnh tim mạch dựa trên dữ liệu lâm sàng của bệnh nhân. Nền tảng sử dụng các dịch vụ Machine Learning trên AWS để xây dựng, huấn luyện và triển khai mô hình dự đoán khả năng mắc bệnh tim với độ chính xác cao. Hệ thống được phát triển theo quy trình MLOps hoàn chỉnh, từ xử lý dữ liệu, huấn luyện mô hình, tối ưu siêu tham số, đến triển khai dưới dạng REST API với khả năng giám sát và phát hiện sai lệch dữ liệu theo thời gian thực.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+---
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+### 2. Tuyên bố vấn đề
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+#### Vấn đề hiện tại
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+Bệnh tim mạch là nguyên nhân gây tử vong hàng đầu trên toàn cầu. Việc chẩn đoán sớm và chính xác đóng vai trò then chốt trong điều trị, nhưng hiện tại các bác sĩ phải dựa chủ yếu vào kinh nghiệm lâm sàng và các chỉ số đơn lẻ, dễ dẫn đến bỏ sót hoặc chẩn đoán sai. Các mô hình dự đoán hiện có thường không được tích hợp vào quy trình khám chữa bệnh một cách hệ thống, thiếu khả năng cập nhật liên tục và giám sát hiệu suất.
 
-### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+#### Giải pháp
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+Hệ thống sử dụng Amazon SageMaker để xây dựng pipeline ML hoàn chỉnh:
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+- Dữ liệu được tiền xử lý và kỹ thuật đặc trưng với **SageMaker Processing Jobs**
+- Mô hình được huấn luyện với các thuật toán như XGBoost hoặc Scikit-learn
+- Siêu tham số được tối ưu hóa tự động với **Automatic Model Tuning**
+- Mô hình được đóng gói, đăng ký trong **SageMaker Model Registry** để quản lý phiên bản
+- Mô hình sau đó được triển khai lên **SageMaker Endpoint** cho suy luận thời gian thực
+- Kết hợp với **API Gateway** và **AWS Lambda** để tạo REST API cho ứng dụng y tế
+- **SageMaker Model Monitor** và **CloudWatch** được thiết lập để phát hiện data drift và theo dõi chất lượng dự đoán
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+#### Lợi ích và hoàn vốn đầu tư (ROI)
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+Hệ thống giúp các bác sĩ đưa ra quyết định nhanh hơn và chính xác hơn, giảm thiểu rủi ro chẩn đoán sai và nâng cao hiệu quả điều trị. Nền tảng này có thể được tích hợp vào các bệnh viện và phòng khám với chi phí vận hành thấp nhờ mô hình serverless và khả năng tự động hóa. Với ước tính chi phí khoảng vài đô la mỗi tháng, hệ thống mang lại giá trị lâu dài về mặt y tế và nghiên cứu, đồng thời có thể mở rộng để dự đoán nhiều loại bệnh khác.
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+---
 
-### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+### 3. Kiến trúc giải pháp
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+Hệ thống áp dụng kiến trúc AWS Serverless và MLOps để xây dựng pipeline ML end-to-end. Dữ liệu bệnh nhân từ các nguồn khác nhau được tải lên Amazon S3, sau đó được tiền xử lý bằng SageMaker Processing Jobs. Mô hình được huấn luyện và tối ưu hóa trong SageMaker Training Jobs và Automatic Model Tuning. Phiên bản mô hình được quản lý trong Model Registry và triển khai lên SageMaker Endpoint. Lambda và API Gateway cung cấp REST API cho ứng dụng y tế, trong khi CloudWatch và Model Monitor đảm bảo hiệu suất theo dõi.
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+![Kiến trúc hệ thống](/images/2-Proposal/ml_architecture.png)
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+#### Dịch vụ AWS sử dụng
+
+| Dịch vụ | Mục đích |
+| --- | --- |
+| **Amazon SageMaker** | Xử lý dữ liệu, huấn luyện, tối ưu, đăng ký mô hình, triển khai endpoint và giám sát |
+| **Amazon S3** | Lưu trữ dữ liệu thô, dữ liệu đã xử lý và artifacts của mô hình |
+| **AWS Lambda** | Xử lý yêu cầu từ API Gateway và gọi SageMaker Endpoint |
+| **Amazon API Gateway** | Cung cấp REST API cho ứng dụng khách |
+| **Amazon CloudWatch** | Giám sát endpoint, ghi log và thiết lập cảnh báo |
+| **AWS IAM** | Quản lý quyền truy cập và phân quyền giữa các dịch vụ |
+| **SageMaker Model Registry** | Lưu trữ và quản lý phiên bản mô hình |
+| **SageMaker Pipelines** | Tự động hóa toàn bộ quy trình ML |
+
+#### Thiết kế thành phần
+
+- **Dữ liệu:** Lưu trữ thô trong S3 bucket, sau đó xử lý và lưu trữ trong bucket riêng cho training
+- **Xử lý dữ liệu:** SageMaker Processing Jobs thực hiện làm sạch, chuẩn hóa, xử lý missing values, và feature engineering
+- **Huấn luyện và tối ưu:** Training Jobs chạy thuật toán XGBoost hoặc custom script với PyTorch; Automatic Model Tuning tối ưu siêu tham số
+- **Quản lý mô hình:** Model Registry lưu trữ các phiên bản với trạng thái (PENDING, APPROVED, REJECTED)
+- **Triển khai:** SageMaker Endpoint cung cấp real-time inference; Lambda làm middleware xử lý request từ API Gateway
+- **Giám sát:** Model Monitor phát hiện data drift và quality drift; CloudWatch cảnh báo khi endpoint có vấn đề
+- **Tự động hóa:** SageMaker Pipelines kết hợp tất cả các bước thành workflow tự động từ preprocessing đến triển khai
+
+---
+
+### 4. Triển khai kỹ thuật
+
+#### Các giai đoạn triển khai
+
+Dự án gồm 8 giai đoạn chính:
+
+| STT | Công việc |
+| --- | --- |
+| **1** | Nghiên cứu ML workflow và hệ sinh thái AWS ML; cấu hình môi trường (IAM, S3, SageMaker Studio) |
+| **2** | Chuẩn bị và xử lý dữ liệu (Data preprocessing, feature engineering) với SageMaker Processing Jobs |
+| **3** | Huấn luyện mô hình (Training Jobs) trên SageMaker; thử nghiệm built-in algorithms hoặc custom script |
+| **4** | Theo dõi thí nghiệm với SageMaker Experiments; tối ưu siêu tham số với Automatic Model Tuning (HPO) |
+| **5** | Đóng gói và đăng ký mô hình vào SageMaker Model Registry; thiết lập model versioning |
+| **6** | Triển khai mô hình lên SageMaker Endpoint (real-time inference); tích hợp API Gateway + Lambda để expose REST API |
+| **7** | Thiết lập monitoring với SageMaker Model Monitor và CloudWatch; phát hiện data drift |
+| **8** | Tự động hoá toàn bộ pipeline với SageMaker Pipelines; tổng hợp kết quả và hoàn thiện báo cáo |
+
+#### Yêu cầu kỹ thuật
+
+- **Ngôn ngữ lập trình:** Python, sử dụng thư viện Scikit-learn, XGBoost, PyTorch
+- **Framework:** Amazon SageMaker, boto3, sagemaker SDK
+- **Dữ liệu:** Tập dữ liệu bệnh tim (ví dụ: UCI Heart Disease Dataset hoặc Framingham) với các đặc trưng như tuổi, huyết áp, cholesterol, nhịp tim, đường huyết, hút thuốc, v.v.
+- **Công cụ:** Jupyter Notebook trong SageMaker Studio, AWS CLI, Git
+- **Kỹ năng:** Python, AWS ML services, MLOps, CI/CD cơ bản
+
+---
+
+### 5. Lộ trình & Mốc triển khai
+
+| Giai đoạn | Mốc quan trọng |
+| --- | --- |
+| **Thiết lập môi trường & Tiền xử lý** | Hoàn thành xử lý dữ liệu, sẵn sàng training |
+| **Huấn luyện & Tối ưu** | Mô hình đạt accuracy ≥ 85%, tối ưu siêu tham số |
+| **Quản lý & Triển khai** | Mô hình được đăng ký và triển khai lên endpoint |
+| **Giám sát** | Hệ thống giám sát data drift hoạt động |
+| **Tự động hóa & Báo cáo** | Pipeline tự động hoàn chỉnh, báo cáo tổng kết |
+| **Sau triển khai** | Mở rộng cho các bệnh khác và tích hợp vào bệnh viện thực tế |
+
+---
+
+### 6. Ước tính ngân sách
+
+> **Lưu ý:** Có thể tham khảo chi phí trên [AWS Pricing Calculator](https://calculator.aws/).
+
+| Dịch vụ | Chi phí ước tính | Ghi chú |
+| --- | --- | --- |
+| SageMaker Studio | ~2.52 USD/tháng | ml.t3.medium, 40 giờ/tháng |
+| SageMaker Endpoint | ~5.52 USD/tháng | ml.m5.large, 24/7 sẽ có giá 99,36, nhưng ở đây bọn em chỉ deploy 40h |
+| S3 Storage | ~0.115 USD/tháng | 5 GB |
+| Lambda | ~0.002 USD/tháng | 10.000 request |
+| API Gateway | ~0.01 USD/tháng | 10.000 request |
+| CloudWatch | ~0.01 USD/tháng | 1 GB log |
+| **Tổng** | **~8,117 USD/tháng** | Khi đã deploy rồi thì sẽ ko phát sinh chi phí của  SageMaker Studio(trừ khi train lại)|
+
+#### Lưu ý về chi phí
+
+- Chi phí phát triển và kiểm thử có thể thấp hơn đáng kể nhờ tắt endpoint khi không sử dụng
+- Sử dụng SageMaker Serverless Inference nếu không cần real-time liên tục 
+- Tận dụng AWS Free Tier cho các service cơ bản (S3, Lambda, API Gateway) để giảm chi phí trong giai đoạn phát triển
+
+---
+
+### 7. Đánh giá rủi ro
+
+#### Ma trận rủi ro
+
+| Rủi ro | Mức độ ảnh hưởng | Xác suất |
+| --- | --- | --- |
+| Sai lệch dữ liệu (data drift) | Cao | Trung bình |
+| Chi phí vượt ngân sách | Trung bình | Thấp |
+| Hiệu suất mô hình kém | Cao | Trung bình |
+| Lỗi tích hợp API | Trung bình | Thấp |
+
+#### Chiến lược giảm thiểu
+
+- **Data drift:** Sử dụng SageMaker Model Monitor để phát hiện và cảnh báo sớm; retrain mô hình định kỳ
+- **Chi phí:** Thiết lập cảnh báo ngân sách và sử dụng SageMaker Serverless Inference để giảm chi phí
+- **Hiệu suất:** Sử dụng Automatic Model Tuning và thử nghiệm nhiều thuật toán; lưu trữ phiên bản cũ để rollback
+- **Lỗi tích hợp:** Kiểm thử kỹ lưỡng bằng API Gateway mock và CloudWatch logs
+
+#### Kế hoạch dự phòng
+
+- Nếu endpoint lỗi, chuyển sang chế độ batch inference hoặc fallback đến mô hình đã được phê duyệt trước đó
+- Sử dụng CloudFormation để khôi phục pipeline trong trường hợp lỗi hệ thống
+
+---
+
+### 8. Kết quả kỳ vọng
+
+#### Cải tiến kỹ thuật
+
+- Hệ thống dự đoán bệnh tim với độ chính xác trên 85%
+- Được tích hợp vào quy trình khám chữa bệnh thông qua REST API
+- Quy trình ML được tự động hóa từ preprocessing đến triển khai, giúp dễ dàng cập nhật và bảo trì
+
+#### Giá trị dài hạn
+
+- Nền tảng có thể mở rộng để dự đoán nhiều bệnh khác như tiểu đường, ung thư, hoặc bệnh hô hấp
+- Hệ thống cung cấp dữ liệu phân tích và mô hình có thể được tái sử dụng cho các nghiên cứu y tế
+- Góp phần nâng cao chất lượng chăm sóc sức khỏe cộng đồng và hỗ trợ ra quyết định cho bác sĩ

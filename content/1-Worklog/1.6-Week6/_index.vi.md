@@ -1,14 +1,10 @@
 ---
 title: "Worklog Tuần 6"
-date: 2024-01-01
+date: 2026-07-25
 weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 6:
 
@@ -18,41 +14,47 @@ pre: " <b> 1.6. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Đóng gói và đăng kí mô hình vào SageMaker Model Registry <br> - Thiết lập model versioning                                                                                          | 20/07/2026   | 20/07/2026      |
+| 3   | - Triển khai mô hình lên SageMaker Endpoint <br> -  Tích hợp API Gateway +Lambda để expost Rest API                                   | 21/07/2026   | 21/07/2026      | 
+| 4   | - Thiết lập monitoring với SageMaker Model Monitor và CloudWatch <br> - Phát hiện data drift| 22/07/2026   | 22/07/2026      |
+| 5   | - Tự động hóa toàn bộ pipeline với SageMaker Pipelines                  | 23/07/2026   | 23/07/2026      |
+| 6   | - Hoàn chỉnh, Tổng hợp, viết báo cáo                                                                                      | 24/07/2026   | 24/07/2026      |
 
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Đóng gói và đăng ký mô hình vào SageMaker Model Registry:
+  * Đóng gói mô hình đã chọn thành công dưới dạng model artifact (model.tar.gz).
+  * Đăng ký mô hình vào SageMaker Model Registry để quản lý tập trung.
+  * Thiết lập model versioning để theo dõi các phiên bản khác nhau của mô hình.
+  * Gán metadata và tags cho mô hình để dễ dàng truy xuất và quản lý.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Triển khai mô hình lên SageMaker Endpoint:
+  * Tạo thành công SageMaker Endpoint để phục vụ dự đoán theo thời gian thực (real-time inference).
+  * Cấu hình instance type phù hợp với yêu cầu về hiệu năng và chi phí.
+  * Kiểm thử endpoint với dữ liệu mẫu để đảm bảo hoạt động chính xác.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tích hợp API Gateway + Lambda để expose REST API:
+  * Xây dựng và triển khai AWS Lambda function để xử lý request từ client.
+  * Tích hợp Lambda với SageMaker Endpoint để gọi model inference.
+  * Tạo REST API trên API Gateway để expose endpoint ra bên ngoài.
+  * Cấu hình CORS, authentication và các cài đặt bảo mật cần thiết.
+  * Kiểm tra API hoạt động với các công cụ như Postman hoặc curl.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Thiết lập monitoring với SageMaker Model Monitor và CloudWatch:
+  * Cấu hình SageMaker Model Monitor để theo dõi chất lượng dự đoán.
+  * Thiết lập phát hiện data drift để phát hiện sự thay đổi trong phân phối dữ liệu đầu vào.
+  * Tạo CloudWatch Alarms để cảnh báo khi có sự cố bất thường.
+  * Xây dựng dashboard giám sát để theo dõi các metrics quan trọng.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Tự động hóa toàn bộ pipeline với SageMaker Pipelines:
+  * Xây dựng pipeline tự động hóa quy trình Machine Learning từ preprocessing đến deploy.
+  * Tích hợp các bước: data loading, preprocessing, training, evaluation, model registration.
+  * Cấu hình pipeline triggers để tự động chạy khi có dữ liệu mới.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Hoàn chỉnh và tổng hợp dự án:
+  * Viết báo cáo tổng kết quá trình thực hiện project.
+  * Tổng hợp các kết quả đạt được, bài học kinh nghiệm và hướng phát triển trong tương lai.
+  * Chuẩn bị tài liệu hướng dẫn sử dụng và vận hành hệ thống.
+  * Hoàn thành tất cả công việc đúng tiến độ.
 

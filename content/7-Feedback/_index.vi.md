@@ -1,37 +1,32 @@
 ---
 title: "Chia sẻ, đóng góp ý kiến"
-date: 2024-01-01
+date: 2026-07-28
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud AI Journey, giúp team FCAJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
-
+### Lời cảm ơn
+Đầu tiên em xin gửi lời cảm ơn đến chương trình cũng như các thành viên trong FCAJ đã tạo ra một sân chơi bổ ích cho bọn em.Trước khi đến với chương trình, em rất sợ về cloud, về deploy, về các dịch vụ trả phí của AWS. Sau khi tham gia chương trình, em vẫn cảm thấy sợ, nhưng mà là nỗi sợ có thể kiểm soát. Qua kì thực tập này em rút ra bài học : Cách để chống lại nỗi sợ là hãy lao vào nó. 
 ### Đánh giá chung
 
 **1. Môi trường làm việc**  
-Môi trường làm việc rất thân thiện và cởi mở. Các thành viên trong FCAJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp mình tập trung tốt hơn. Tuy nhiên, mình nghĩ có thể bổ sung thêm một số buổi giao lưu hoặc team bonding để mọi người hiểu nhau hơn.
+Môi trường làm việc thân thiện, thoải mái. Về cơ sở vật chất có phòng óc rọng rãi, điều hòa, ổ điện, wifi mạnh. Về con người, các anh chị ở FCAJ thân thiện, sẵn sàng hướng dẫn, các bạn thực tập cùng thì dễ gần, dễ trao đổi, đúng với tinh thần "learn together, work together, go together"
 
 **2. Sự hỗ trợ của mentor / team admin**  
-Mentor hướng dẫn rất chi tiết, giải thích rõ ràng khi mình chưa hiểu và luôn khuyến khích mình đặt câu hỏi. Team admin hỗ trợ các thủ tục, tài liệu và tạo điều kiện để mình làm việc thuận lợi. Mình đánh giá cao việc mentor cho phép mình thử và tự xử lý vấn đề thay vì chỉ đưa đáp án.
+Một trong những điều mà mình thấy tiếc ở chương trình này chính là không có mentor, tuy các anh chị admin thân thiện và sẵn sàng giúp đỡ nhưng mà việc không có mentor hướng dẫn kĩ càng cũng là 1 điều đáng tiếc.
 
-**3. Sự phù hợp giữa công việc và chuyên ngành học**  
-Công việc mình được giao phù hợp với kiến thức mình đã học ở trường, đồng thời mở rộng thêm những mảng mới mà mình chưa từng được tiếp cận. Nhờ vậy, mình vừa củng cố kiến thức nền tảng, vừa học thêm kỹ năng thực tế.
+**3. Sự bổ sung phù hợp cho công việc và chuyên ngành học**  
+Chuyên ngành em theo học là AI Engineer và chương trình này giúp em không chỉ tăng kĩ năng train model mà còn giúp em bổ sung kĩ năng lên mây, giúp sản phẩm của em đến được nhiều người hơn
 
 **4. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Mentor cũng chia sẻ nhiều kinh nghiệm thực tế giúp mình định hướng tốt hơn cho sự nghiệp.
+Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Em học được rất nhiều từ các anh chị admin, từ các tài liệu được cung cấp cũng như từ các bạn tham gia thực tập.
 
 **5. Văn hóa & tinh thần đồng đội**  
 Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
 
-**6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
 
 
+<!-- 
 ### Một số câu hỏi khác
 - Điều bạn **hài lòng nhất** trong thời gian thực tập?  
 - Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
@@ -41,4 +36,8 @@ Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về t
 ### Đề xuất & mong muốn
 - Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
 - Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+- Góp ý khác (tự do chia sẻ): -->
+### Đề xuất & mong muốn
+Về đề xuất và mong muốn em chỉ có 2 đề suất:
+- Có thể gom 1 nhóm 5 6 bạn cho 1 mentor quản lý, như vậy vừa học nhiều lại còn kỉ luật.
+- Nên cập nhật lại tài liệu ở trang portal, có nhiều tài liệu, hướng dẫn đã quá cũ. 

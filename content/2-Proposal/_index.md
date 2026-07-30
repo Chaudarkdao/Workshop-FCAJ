@@ -1,115 +1,175 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-07-27
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+## Heart Disease Prediction System with Machine Learning on AWS
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+### End-to-end solution using Amazon SageMaker for medical diagnostic support
+
+---
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+
+The Heart Disease Prediction System is designed to assist healthcare facilities in screening and assessing cardiovascular disease risk based on patient clinical data. The platform uses AWS Machine Learning services to build, train, and deploy a model for predicting the likelihood of heart disease with high accuracy. The system is developed following a complete MLOps process, from data processing, model training, hyperparameter optimization, to deployment as a REST API with real-time monitoring and data drift detection capabilities.
+
+---
 
 ### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+#### Current Problem
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+Cardiovascular disease is the leading cause of death globally. Early and accurate diagnosis plays a crucial role in treatment, but currently doctors must rely primarily on clinical experience and individual indicators, which can easily lead to missed or incorrect diagnoses. Existing prediction models are often not systematically integrated into the medical examination process, lacking continuous update capabilities and performance monitoring.
+
+#### Solution
+
+The system uses Amazon SageMaker to build a complete ML pipeline:
+
+- Data is preprocessed and feature engineered with **SageMaker Processing Jobs**
+- Models are trained with algorithms such as XGBoost or Scikit-learn
+- Hyperparameters are automatically optimized with **Automatic Model Tuning**
+- Models are packaged and registered in **SageMaker Model Registry** for version management
+- Models are then deployed to **SageMaker Endpoint** for real-time inference
+- Combined with **API Gateway** and **AWS Lambda** to create REST APIs for medical applications
+- **SageMaker Model Monitor** and **CloudWatch** are set up to detect data drift and monitor prediction quality
+
+#### Benefits and Return on Investment (ROI)
+
+The system helps doctors make faster and more accurate decisions, minimizing the risk of misdiagnosis and improving treatment effectiveness. This platform can be integrated into hospitals and clinics with low operational costs thanks to serverless architecture and automation capabilities. With estimated costs of just a few dollars per month, the system provides long-term value in healthcare and research, while being scalable to predict many other diseases.
+
+---
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+The system applies AWS Serverless and MLOps architecture to build an end-to-end ML pipeline. Patient data from various sources is uploaded to Amazon S3, then preprocessed using SageMaker Processing Jobs. Models are trained and optimized in SageMaker Training Jobs and Automatic Model Tuning. Model versions are managed in Model Registry and deployed to SageMaker Endpoint. Lambda and API Gateway provide REST APIs for medical applications, while CloudWatch and Model Monitor ensure performance tracking.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+![System Architecture](/images/2-Proposal/ml_architecture.png)
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+#### AWS Services Used
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+| Service | Purpose |
+| --- | --- |
+| **Amazon SageMaker** | Data processing, training, optimization, model registration, endpoint deployment, and monitoring |
+| **Amazon S3** | Store raw data, processed data, and model artifacts |
+| **AWS Lambda** | Process requests from API Gateway and invoke SageMaker Endpoint |
+| **Amazon API Gateway** | Provide REST API for client applications |
+| **Amazon CloudWatch** | Monitor endpoints, log, and set up alerts |
+| **AWS IAM** | Manage access permissions between services |
+| **SageMaker Model Registry** | Store and manage model versions |
+| **SageMaker Pipelines** | Automate the entire ML workflow |
+
+#### Component Design
+
+- **Data:** Raw data stored in S3 bucket, then processed and stored in a separate bucket for training
+- **Data Processing:** SageMaker Processing Jobs perform cleaning, normalization, missing value handling, and feature engineering
+- **Training and Optimization:** Training Jobs run XGBoost algorithms or custom scripts with PyTorch; Automatic Model Tuning optimizes hyperparameters
+- **Model Management:** Model Registry stores versions with statuses (PENDING, APPROVED, REJECTED)
+- **Deployment:** SageMaker Endpoint provides real-time inference; Lambda acts as middleware processing requests from API Gateway
+- **Monitoring:** Model Monitor detects data drift and quality drift; CloudWatch alerts when endpoint issues occur
+- **Automation:** SageMaker Pipelines combine all steps into an automated workflow from preprocessing to deployment
+
+---
 
 ### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+#### Implementation Phases
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+The project consists of 8 main phases:
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+| No. | Task |
+| --- | --- |
+| **1** | Research ML workflow and AWS ML ecosystem; configure environment (IAM, S3, SageMaker Studio) |
+| **2** | Prepare and process data (Data preprocessing, feature engineering) with SageMaker Processing Jobs |
+| **3** | Train models (Training Jobs) on SageMaker; test built-in algorithms or custom scripts |
+| **4** | Track experiments with SageMaker Experiments; optimize hyperparameters with Automatic Model Tuning (HPO) |
+| **5** | Package and register models in SageMaker Model Registry; set up model versioning |
+| **6** | Deploy models to SageMaker Endpoint (real-time inference); integrate API Gateway + Lambda to expose REST API |
+| **7** | Set up monitoring with SageMaker Model Monitor and CloudWatch; detect data drift |
+| **8** | Automate the entire pipeline with SageMaker Pipelines; compile results and complete report |
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+#### Technical Requirements
 
-Total: $0.7/month, $8.40/12 months
+- **Programming Language:** Python, using Scikit-learn, XGBoost, PyTorch libraries
+- **Framework:** Amazon SageMaker, boto3, sagemaker SDK
+- **Data:** Heart disease dataset (e.g., UCI Heart Disease Dataset or Framingham) with features such as age, blood pressure, cholesterol, heart rate, blood sugar, smoking, etc.
+- **Tools:** Jupyter Notebook in SageMaker Studio, AWS CLI, Git
+- **Skills:** Python, AWS ML services, MLOps, basic CI/CD
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+---
+
+### 5. Roadmap & Milestones
+
+| Phase | Milestone |
+| --- | --- |
+| **Environment Setup & Preprocessing** | Complete data processing, ready for training |
+| **Training & Optimization** | Model achieves accuracy ≥ 85%, hyperparameters optimized |
+| **Management & Deployment** | Model registered and deployed to endpoint |
+| **Monitoring** | Data drift monitoring system operational |
+| **Automation & Report** | Complete automated pipeline, final report |
+| **Post-deployment** | Expand to other diseases and integrate into actual hospitals |
+
+---
+
+### 6. Budget Estimate
+
+> **Note:** Costs can be referenced on [AWS Pricing Calculator](https://calculator.aws/).
+
+| Service | Estimated Cost | Note |
+| --- | --- | --- |
+| SageMaker Studio | ~$2.52/month | ml.t3.medium, 40 hours/month |
+| SageMaker Endpoint | ~$5.52/month | ml.m5.large, 40 hours (24/7 would be $99.36) |
+| S3 Storage | ~$0.115/month | 5 GB |
+| Lambda | ~$0.002/month | 10,000 requests |
+| API Gateway | ~$0.01/month | 10,000 requests |
+| CloudWatch | ~$0.01/month | 1 GB log |
+| **Total** | **~$8.117/month** | SageMaker Studio costs won't be incurred after deployment (unless retraining) |
+
+#### Cost Notes
+
+- Development and testing costs can be significantly reduced by turning off endpoints when not in use
+- Use SageMaker Serverless Inference if continuous real-time is not required
+- Leverage AWS Free Tier for basic services (S3, Lambda, API Gateway) to reduce costs during development phase
+
+---
 
 ### 7. Risk Assessment
+
 #### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+
+| Risk | Impact Level | Probability |
+| --- | --- | --- |
+| Data drift | High | Medium |
+| Budget overrun | Medium | Low |
+| Poor model performance | High | Medium |
+| API integration errors | Medium | Low |
 
 #### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+- **Data drift:** Use SageMaker Model Monitor for early detection and alerts; retrain models periodically
+- **Cost:** Set up budget alerts and use SageMaker Serverless Inference to reduce costs
+- **Performance:** Use Automatic Model Tuning and test multiple algorithms; store old versions for rollback
+- **Integration errors:** Thorough testing with API Gateway mock and CloudWatch logs
+
+#### Contingency Plan
+
+- If endpoint fails, switch to batch inference mode or fallback to previously approved model
+- Use CloudFormation to restore pipeline in case of system failure
+
+---
 
 ### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
+
+#### Technical Improvements
+
+- Heart disease prediction system with accuracy above 85%
+- Integrated into the medical examination process via REST API
+- ML process automated from preprocessing to deployment, enabling easy updates and maintenance
+
 #### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+
+- Platform can be extended to predict other diseases such as diabetes, cancer, or respiratory diseases
+- System provides analytical data and models that can be reused for medical research
+- Contributes to improving community healthcare quality and supporting doctors in decision-making

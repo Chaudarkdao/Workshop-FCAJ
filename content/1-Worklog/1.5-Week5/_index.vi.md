@@ -1,14 +1,10 @@
 ---
 title: "Worklog Tuần 5"
-date: 2024-01-01
+date: 2026-07-25
 weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 5:
 
@@ -18,42 +14,36 @@ pre: " <b> 1.5. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Huấn luyện mô hình                                                                                             | 13/07/2026   | 13/07/2026      |
+| 3   | - Huấn luyện mô hình                                          | 14/07/2026   | 14/07/2026      | 
+| 4   | - Huấn luyện mô hình | 15/07/2026   | 15/07/2026      |
+| 5   | - Thử nghiệm các mô hình khác nhau                  | 16/07/2026   | 16/07/2026      |
+| 6   | - Chọn ra mô hình phù hợp, sẵn sàng deploy                                                                                      | 17/07/2026   | 17/07/2026      |
+
 
 
 ### Kết quả đạt được tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Huấn luyện và đánh giá các mô hình Machine Learning:
+  * Tiến hành huấn luyện các mô hình khác nhau trên tập dữ liệu đã được tiền xử lý từ tuần trước.
+  * Thực nghiệm với nhiều thuật toán khác nhau như: Linear Regression, Random Forest, XGBoost, SVM, Neural Networks,...
+  * Đánh giá hiệu suất của từng mô hình thông qua các metrics phù hợp (Accuracy, Precision, Recall, F1-Score, RMSE, MAE,...).
+  * So sánh kết quả giữa các mô hình để xác định ưu nhược điểm của từng thuật toán.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Tối ưu hóa siêu tham số (Hyperparameter Tuning):
+  * Sử dụng các kỹ thuật như Grid Search, Random Search hoặc Bayesian Optimization để tìm bộ siêu tham số tối ưu cho từng mô hình.
+  * Áp dụng Cross-Validation để đảm bảo tính ổn định và tránh overfitting.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thử nghiệm các mô hình khác nhau:
+  * Thực hiện thử nghiệm với ít nhất 3-4 loại mô hình khác nhau.
+  * Đánh giá thời gian huấn luyện và độ phức tạp của từng mô hình.
+  * Phân tích feature importance để hiểu rõ các yếu tố ảnh hưởng đến kết quả dự đoán.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Chọn ra mô hình phù hợp nhất:
+  * Dựa trên kết quả đánh giá, chọn mô hình có hiệu suất tốt nhất và phù hợp với yêu cầu của project.
+  * Đưa ra lý do và cơ sở để lựa chọn mô hình cuối cùng.
+  * Lưu lại mô hình đã chọn (model serialization) để chuẩn bị cho việc deploy.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Hoàn thành các công việc đúng tiến độ, sẵn sàng cho giai đoạn deploy mô hình và xây dựng API/phần mềm ứng dụng trong tuần tiếp theo.
 
 

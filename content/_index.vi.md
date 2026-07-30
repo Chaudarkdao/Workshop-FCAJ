@@ -7,23 +7,21 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
+&emsp; **Họ và tên:** Nguyễn Trần Nhật Châu
 
-&emsp; **Số điện thoại:** 0989888999
+&emsp; **Số điện thoại:** 0905664213
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** chau.nguyenchau1304@hcmut.edu.vn
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+&emsp; **Trường:** Đại học Bách Khoa TP.HCM
 
-&emsp; **Ngành:** Công nghệ thông tin
-
-&emsp; **Lớp:** AWS082025
+&emsp; **Ngành:** Khoa học máy tính
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
+&emsp; **Thời gian thực tập:** Từ ngày 15/06/2025 đến ngày 15/8/2025
 
 ![Ảnh đại diện của bạn](/images/avatar.png)
 

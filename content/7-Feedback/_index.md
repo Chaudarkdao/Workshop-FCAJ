@@ -1,47 +1,35 @@
 ---
 title: "Sharing and Feedback"
-date: 2024-01-01
+date: 2026-07-08
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+### Thank You
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+First of all, I would like to express my gratitude to the program and all the members of FCAJ for creating such a beneficial playground for us. Before joining the program, I was very afraid of cloud, of deployment, of AWS paid services. After participating in the program, I am still afraid, but it's a fear that I can control. Through this internship, I learned a lesson: The way to fight fear is to dive into it.
 
-### Overall Evaluation
+### Overall Assessment
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+**1. Work Environment**
+The work environment is friendly and comfortable. Regarding facilities, there is a spacious room, air conditioning, power outlets, and strong WiFi. Regarding people, the seniors at FCAJ are friendly and willing to guide, while fellow interns are approachable and easy to communicate with, truly embodying the spirit of "learn together, work together, go together."
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+**2. Support from Mentor / Admin Team**
+One of the things I regret about this program is the lack of a mentor. Although the admin team is friendly and willing to help, not having a mentor to provide detailed guidance is a pity.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**3. Relevance to Work and Major**
+My major is AI Engineer, and this program not only helped me improve my model training skills but also equipped me with cloud deployment skills, helping my products reach more people.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+**4. Learning Opportunities & Skill Development**
+During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. I learned a lot from the admin team, from the provided materials, and from fellow interns.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+**5. Culture & Team Spirit**
+The company culture is very positive: everyone respects each other, works seriously but still enjoys themselves. When there are urgent projects, everyone strives together, supporting each other regardless of position. This helped me feel like I was part of the collective, even as just an intern.
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+### Suggestions & Wishes
 
----
+I have only two suggestions:
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
-
----
-
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+- It would be beneficial to group 5-6 students under one mentor for management. This way, we can learn more and maintain better discipline.
+- The documentation on the portal should be updated, as many materials and guides are outdated.
