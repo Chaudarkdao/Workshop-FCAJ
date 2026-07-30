@@ -46,7 +46,7 @@ The system helps doctors make faster and more accurate decisions, minimizing the
 
 The system applies AWS Serverless and MLOps architecture to build an end-to-end ML pipeline. Patient data from various sources is uploaded to Amazon S3, then preprocessed using SageMaker Processing Jobs. Models are trained and optimized in SageMaker Training Jobs and Automatic Model Tuning. Model versions are managed in Model Registry and deployed to SageMaker Endpoint. Lambda and API Gateway provide REST APIs for medical applications, while CloudWatch and Model Monitor ensure performance tracking.
 
-![System Architecture](/images/2-Proposal/ml_architecture.png)
+![System Architecture](../images/2-Proposal/ml_architecture.png)
 
 #### AWS Services Used
 

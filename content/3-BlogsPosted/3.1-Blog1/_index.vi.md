@@ -24,7 +24,7 @@ AWS Lambda là dịch vụ serverless compute hàng đầu của AWS, cho phép 
 Serverless là một tư duy thiết kế kiến trúc hiện đại. Việc làm chủ AWS Lambda cùng các dịch vụ trong hệ sinh thái AWS sẽ giúp bạn xây dựng những hệ thống linh hoạt, sẵn sàng mở rộng bất cứ lúc nào và tối ưu chi phí vận hành.
 
 ### Hình ảnh 
-![Hình ảnh bài viết](/images/3-BlogsPosted/post1/p1.jpg)
+![Hình ảnh bài viết](../images/3-BlogsPosted/post1/p1.jpg)
 ### Link 
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2227143931383900/?rdid=5jaCWs2BU5KXcoSe#
 

@@ -48,7 +48,7 @@ Hệ thống giúp các bác sĩ đưa ra quyết định nhanh hơn và chính 
 
 Hệ thống áp dụng kiến trúc AWS Serverless và MLOps để xây dựng pipeline ML end-to-end. Dữ liệu bệnh nhân từ các nguồn khác nhau được tải lên Amazon S3, sau đó được tiền xử lý bằng SageMaker Processing Jobs. Mô hình được huấn luyện và tối ưu hóa trong SageMaker Training Jobs và Automatic Model Tuning. Phiên bản mô hình được quản lý trong Model Registry và triển khai lên SageMaker Endpoint. Lambda và API Gateway cung cấp REST API cho ứng dụng y tế, trong khi CloudWatch và Model Monitor đảm bảo hiệu suất theo dõi.
 
-![Kiến trúc hệ thống](/images/2-Proposal/ml_architecture.png)
+![Kiến trúc hệ thống](../images/2-Proposal/ml_architecture.png)
 
 #### Dịch vụ AWS sử dụng
 

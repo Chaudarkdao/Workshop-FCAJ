@@ -23,7 +23,7 @@ Amazon SageMaker is AWS's comprehensive machine learning platform, allowing you 
 Machine Learning on the Cloud is not just about accuracy but also about cost and performance. Mastering SageMaker will help you build AI systems that are powerful, cost-effective, and easily scalable as data volume grows.
 
 ### Image
-![Blog post image](/images/3-BlockPosted/post2/p2.jpg)
+![Blog post image](../images/3-BlogsPosted/post2/p2.jpg)
 
 ### Link
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2227364341361859/?rdid=68pXQ0dwEEaR4uKf#

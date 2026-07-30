@@ -283,4 +283,4 @@ Sự kiện đã mang đến một góc nhìn toàn diện và thực tế về 
 
 ### Hình Ảnh Sự Kiện
 
-![Toàn cảnh sự kiện AWS First Cloud AI Journey Community Day](/images/event/event2/checkin2.jpg)
+![Toàn cảnh sự kiện AWS First Cloud AI Journey Community Day](../images/event/event2/checkin2.jpg)

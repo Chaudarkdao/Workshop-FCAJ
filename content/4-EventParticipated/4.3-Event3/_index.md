@@ -334,4 +334,4 @@ Key success factors:
 
 ### Event Photos
 
-![Overview of Aentic AI Buildwick 2026 event](images/event/event3/checkin3.jpg)
+![Overview of Aentic AI Buildwick 2026 event](../images/event/event3/checkin3.jpg)

@@ -23,6 +23,6 @@ Amazon SageMaker là nền tảng machine learning toàn diện của AWS, cho p
 Machine Learning trên Cloud không chỉ là bài toán về accuracy mà còn là bài toán về chi phí và hiệu năng. Làm chủ SageMaker sẽ giúp bạn xây dựng những hệ thống AI vừa mạnh mẽ, vừa tiết kiệm và dễ dàng mở rộng khi quy mô dữ liệu tăng lên.
 
 ### Hình ảnh 
-![Hình ảnh bài viết](/images/3-BlogsPosted/post2/p2.jpg)
+![Hình ảnh bài viết](../images/3-BlogsPosted/post2/p2.jpg)
 ### Link 
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2227364341361859/?rdid=68pXQ0dwEEaR4uKf#
