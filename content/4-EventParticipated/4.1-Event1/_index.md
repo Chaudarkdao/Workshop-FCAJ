@@ -185,4 +185,4 @@ After participating in the "GenAI-powered App-DB Modernization workshop", I gain
 The event provided a comprehensive and in-depth view of how AI is shaping the future of enterprises. From Cloud Agent, Voice AI, DevOps Agent, AI in HR to Security & MCP Server, all demonstrate the enormous potential of AI in optimizing operations, improving efficiency, and creating new value. This is the golden time for us students to equip knowledge and skills about AI to be ready for the future job market.
 
 ### Event Photos
-![Overview of AWS First Cloud AI Journey Community Day](../images/event/event1/checkin1.jpg)
+![Overview of AWS First Cloud AI Journey Community Day](../../images/event/event1/checkin1.jpg)

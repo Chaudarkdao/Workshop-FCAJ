@@ -337,7 +337,7 @@ Những điểm mấu chốt để thành công:
 
 ### Hình Ảnh Sự Kiện
 
-![Toàn cảnh sự kiện Aentic AI Buildwick 2026](../images/event/event3/checkin3.jpg)
+![Toàn cảnh sự kiện Aentic AI Buildwick 2026](../../images/event/event3/checkin3.jpg)
 
 
 

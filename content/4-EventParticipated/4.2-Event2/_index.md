@@ -279,4 +279,4 @@ This is the golden time to equip the knowledge, skills, and mindset needed to be
 
 ### Event Photos
 
-![Overview of the AWS First Cloud AI Journey Community Day event](../images/event/event2/checkin2.jpg)
+![Overview of the AWS First Cloud AI Journey Community Day event](../../images/event/event2/checkin2.jpg)

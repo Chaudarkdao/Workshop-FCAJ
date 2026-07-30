@@ -24,7 +24,7 @@ AWS Lambda is AWS's leading serverless compute service, allowing you to run code
 Serverless is a modern architectural mindset. Mastering AWS Lambda alongside other services in the AWS ecosystem will help you build flexible systems that are ready to scale at any time while optimizing operational costs.
 
 ### Image
-![Blog Image](../images/3-BlogsPosted/post1/p1.jpg)
+![Blog Image](../../images/3-BlogsPosted/post1/p1.jpg)
 
 ### Link
 https://www.facebook.com/groups/awsstudygroupfcj/permalink/2227143931383900/?rdid=5jaCWs2BU5KXcoSe#
