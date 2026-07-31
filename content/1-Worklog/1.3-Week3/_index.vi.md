@@ -14,7 +14,7 @@ pre: " <b> 1.3. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Đọc tài liệu về SageMaker <br> - Tìm hiểu về các chứng năng mà SageMaker cung cấp                                                                                              | 29/06/2026   | 29/06/2026      | <https://docs.aws.amazon.com/> |
+| 2   | - Đọc tài liệu về SageMaker <br> - Tìm hiểu về các chức năng mà SageMaker cung cấp                                                                                              | 29/06/2026   | 29/06/2026      | <https://docs.aws.amazon.com/> |
 | 3   | - Tìm hiểu về Notebook trên SageMaker <br> - Thực hiện vài câu lệnh cơ bản trên notebook                                            | 30/06/2026   | 30/06/2026      | <https://docs.aws.amazon.com/> |
 | 4   | - Đọc và tìm hiểu về Data Wranger của SageMaker <br> - Thực hành xử lý dataset mẫu | 01/07/2026   | 01/07/2026      | <https://docs.aws.amazon.com/> |
 | 5   | - Tìm hiểu cách sử dụng S3 để lưu trữ dữ liệu                  | 02/07/2026   | 02/07/2026      | <https://docs.aws.amazon.com/> |
