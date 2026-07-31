@@ -35,7 +35,9 @@ Mô hình đạt ROC-AUC 0,885515. Recall đạt 0,818594, nghĩa là mô hình 
 | 1 | Approved | version được duyệt và giữ lại |
 | 2 | Approved | nguồn triển khai cho heart-risk-endpoint |
 | 3 | PendingManualApproval | được Pipeline thành công tạo |
-Kết luận: 
+
+
+**Kết luận:**
 Sau khi có kết quả ta tiến hành đăng kí model. Nhìn vào hình có 2 version được duyệt là 1 và 2. Version 3 ko được duyệt vì nó là sản phẩm của quá trình pipeline. Ở đây nó ko được duyệt chứng tỏ Pipeline không tự động phê duyệt hoặc triển khai model, giúp duy trì bước kiểm soát thủ công trước production deployment.
 
 
