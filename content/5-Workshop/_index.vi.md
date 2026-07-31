@@ -20,7 +20,7 @@ Trong project này, chúng ta sẽ cùng nhau xây dựng một hệ thống d�
 2. ✅ Huấn luyện mô hình dự đoán bệnh tim với độ chính xác cao
 3. ✅ Triển khai mô hình dưới dạng REST API cho ứng dụng y tế
 4. ✅ Thiết lập giám sát và phát hiện sai lệch dữ liệu
-5. ✅ Đảm bảo bảo mật dữ liệu bệnh nhân với VPC Endpoint
+
 
 **Luồng dữ liệu trong hệ thống:**
 

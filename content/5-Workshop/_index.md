@@ -20,7 +20,7 @@ In this project, we will build a complete end-to-end heart attack risk predictio
 2. ✅ Train a heart disease prediction model with high accuracy
 3. ✅ Deploy the model as a REST API for medical applications
 4. ✅ Set up monitoring and data drift detection
-5. ✅ Ensure patient data security with VPC Endpoint
+
 
 **Data flow in the system:**
 
