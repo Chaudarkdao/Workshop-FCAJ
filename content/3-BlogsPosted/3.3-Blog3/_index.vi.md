@@ -254,7 +254,7 @@ Bạn đang làm project AWS nào? Đã từng "cháy bill" chưa? Chia sẻ ở
 ---
 
 ### Hình ảnh
-![Blog Image](../../../images/3-BlockPosted/post3/p3.jpg)
+![Blog Image](../../../images/3-BlogsPosted/post3/p3.jpg)
 
 ### Link
 Bài post này chưa được duyệt
