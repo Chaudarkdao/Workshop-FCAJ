@@ -21,6 +21,8 @@ chapter: false
 
 &emsp; **Major:** Computer Science
 
+&emsp; **Class:** FCAJ-BKU-2026
+
 &emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey

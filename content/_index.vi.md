@@ -17,6 +17,8 @@ chapter: false
 
 &emsp; **Ngành:** Khoa học máy tính
 
+&emsp; **Lớp:** FCAJ-BKU-2026
+
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
