@@ -5,27 +5,38 @@ weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# BUILDING AND DEPLOYING AN END-TO-END HEART ATTACK RISK PREDICTION SYSTEM ON AWS SAGEMAKER
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+**Amazon SageMaker** is AWS's comprehensive Machine Learning service, allowing you to build, train, and deploy ML models at any scale without managing complex infrastructure.
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+In this project, we will build a complete end-to-end heart attack risk prediction system. The system will use patient clinical data to predict the likelihood of cardiovascular disease, supporting doctors in screening and risk assessment quickly and accurately.
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+**Project objectives:**
 
-#### Content
+1. ✅ Build a complete ML pipeline on Amazon SageMaker
+2. ✅ Train a heart disease prediction model with high accuracy
+3. ✅ Deploy the model as a REST API for medical applications
+4. ✅ Set up monitoring and data drift detection
+5. ✅ Ensure patient data security with VPC Endpoint
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+**Data flow in the system:**
+
+#### Contents
+
+1. [Workshop Overview](5.1-Overview/)
+2. [Prerequisites](5.2-Prerequisites/)
+3. [Architecture](5.3-Architecture/)
+4. [Data Processing](5.4-Preparation/)
+5. [Model Training](5.5-Model-training/)
+6. [Evaluation and Model Registry](5.6-Evalution/)
+7. [Deployment](5.7-Deploy/)
+8. [Monitoring and Data Drift Detection](5.8-Monitoring/)
+9. [Pipeline](5.9-Pipeline/)
+10. [Cleanup](5.10-Cleanup/)
+11. [Results](5.11-Result/)
+
+### Source
+https://github.com/DuoChip/heart-risk-aws
